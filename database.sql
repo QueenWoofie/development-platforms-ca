@@ -1,0 +1,24 @@
+CREATE DATABASE IF NOT EXISTS news_site
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+USE news_site;
+
+CREATE TABLE IF NOT EXISTS users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    email VARCHAR(200) UNIQUE NOT NULL,
+    password_hash VARCHAR(200) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS articles (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(200) NOT NULL,
+    body TEXT NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    submitted_by INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_articles_user
+        FOREIGN KEY (submitted_by)
+        REFERENCES users(id)
+        ON DELETE CASCADE
+) ENGINE=InnoDB;
