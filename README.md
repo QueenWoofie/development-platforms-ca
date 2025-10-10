@@ -21,6 +21,7 @@ mysql -u root -p < database.sql
 ```
 
 Or open database.sql in MySQL Workbench and click the lightning bolt to run.
+
 ---
 
 4. Run
