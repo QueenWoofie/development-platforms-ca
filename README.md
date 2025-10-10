@@ -63,3 +63,7 @@ curl -i -X POST http://localhost:3000/auth/login -H "Content-Type: application/j
 curl -i -X POST http://localhost:3000/articles -H "Authorization: Bearer <PASTE_TOKEN>" -H "Content-Type: application/json" -d "{"title":"Hello","body":"World","category":"general"}"
 curl -i http://localhost:3000/articles
 ```
+
+## Motivation
+
+I wanted to focus on alternative 1 to get a deeper look at "the other side" as you may say. I wanted to see what backend looked like and how it was to work with since I sometimes find myself unsure if I might want to aim for a fullstack alternative in the future. If there was anything I learned about myself when going through this though was that I very much prefer the side of frontend where you have a more visible view when you change something, and I was missing the feel of seeing what I was building in a more decorative manner as this was only databased. I did however find it fun when I could figure things out still, although it was a bit harder in my view. 
